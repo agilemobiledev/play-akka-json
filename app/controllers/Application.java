@@ -76,6 +76,9 @@ public class Application extends Controller {
 		public void onReceive(Object message) throws Exception {
 			if (message instanceof String){
 				Logger.debug("Received String message: {}" + message);
+
+				//Here is where you can put your long running blocking code like getting the product feed from various sources
+
 				getSender().tell("Hello world");
 			}
 			else {
